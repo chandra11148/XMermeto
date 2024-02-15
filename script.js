@@ -39,7 +39,7 @@ function addProduct(data) {
   data[0].category_products.map((item) => {
     let card = document.createElement("div");
     card.className = "card";
-    let image = createImageWithBadge(item.image);
+    let image = createImage(item.image);
     if (item.badge_text) {
         let badgeContainer = document.createElement("div");
         badgeContainer.className = "badgeContainer";
@@ -60,7 +60,7 @@ function addProduct(data) {
     productContainer.appendChild(card);
   });
 }
-function createImageWithBadge(image) {
+function createImage(image) {
   let img = document.createElement("img");
   img.src = image;
   img.className = "image";
